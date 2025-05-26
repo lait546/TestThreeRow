@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8319ee9de67b91c45bcc11769e02848f, type: 3}
+  m_Name: Figures
+  m_EditorClassIdentifier: 
+  FigurePref: {fileID: 2665494747177958769, guid: 9cd4c84ed5b802c4f95eb26535464263, type: 3}
+  FrozenSprite: {fileID: 21300000, guid: eeb59f78d0078b746900e4ef373f6d37, type: 3}
+  FigureItems:
+  - {fileID: 2665494747177958769, guid: 9cd4c84ed5b802c4f95eb26535464263, type: 3}
+  - {fileID: 1606540573629359382, guid: 351fe147039a674459942cf408a8d6cc, type: 3}
+  - {fileID: 815876677421912988, guid: c1bf103aabb847f4ab60848f38b5d27f, type: 3}
+  - {fileID: 4947406649869969008, guid: 23798901feafd5c4ab5d59aa9775045a, type: 3}
+  AnimalItems:
+  - SpriteAnimal: {fileID: 21300000, guid: 685e86a8addea774b999473bac64a68d, type: 3}
+    AnimalType: 0
+  - SpriteAnimal: {fileID: 21300000, guid: 21de5d524b8a4cd4388503521fbf34e0, type: 3}
+    AnimalType: 4
+  - SpriteAnimal: {fileID: 21300000, guid: 375c654f5bf596247b588f62f57061f3, type: 3}
+    AnimalType: 1
+  - SpriteAnimal: {fileID: 21300000, guid: 63ca217ba60f6d34eb3df8172451b4a1, type: 3}
+    AnimalType: 8
+  - SpriteAnimal: {fileID: 21300000, guid: 854a6d2c6ae3a9b49af0ead65ddea091, type: 3}
+    AnimalType: 2
+  - SpriteAnimal: {fileID: 21300000, guid: 2cdb2745c6f124b41bd8c7c68dd1a08f, type: 3}
+    AnimalType: 9
+  - SpriteAnimal: {fileID: 21300000, guid: 29be0b6fcd567ac42b658108976814e9, type: 3}
+    AnimalType: 3
+  - SpriteAnimal: {fileID: 21300000, guid: 3142cc8dd468f8f4eb92861ca921ba9e, type: 3}
+    AnimalType: 5
+  - SpriteAnimal: {fileID: 21300000, guid: 4c2a3b72c0c7a7447be5f50a6a735e95, type: 3}
+    AnimalType: 6
+  - SpriteAnimal: {fileID: 21300000, guid: 8b78ac7ec695f5847b68ec2307fe7c97, type: 3}
+    AnimalType: 7
+  ColorItems:
+  - Color: {r: 1, g: 0, b: 0, a: 1}
+    FigureColor: 0
+  - Color: {r: 1, g: 0.8698913, b: 0, a: 1}
+    FigureColor: 3
+  - Color: {r: 0.077782035, g: 1, b: 0, a: 1}
+    FigureColor: 1
+  - Color: {r: 0, g: 0.023376942, b: 1, a: 1}
+    FigureColor: 2
+  - Color: {r: 0, g: 0.963464, b: 1, a: 1}
+    FigureColor: 4
