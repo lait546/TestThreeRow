@@ -5,16 +5,13 @@ using UnityEngine;
 
 public class EndGameWindow : MonoBehaviour
 {
-    public static EndGameWindow Instance;
-
     [SerializeField] private GameObject _window;
     [SerializeField] private TextMeshProUGUI _rslt;
 
     public void Awake()
     {
-        Instance = this;
-
         Figures.AllCountChanged += TryEnd;
+        SelectedPanel.OnFigureFull += Lose;
     }
 
     public void TryEnd(int curFiguresCount)
@@ -31,6 +28,12 @@ public class EndGameWindow : MonoBehaviour
             _rslt.text = "Win!";
         else
             _rslt.text = "Lose.";
+    }
+
+    public void Lose()
+    {
+        _window.SetActive(true);
+        _rslt.text = "Lose.";
     }
 
     public void ResetGame()

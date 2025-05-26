@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Playables;
-using UnityEngine;
 
 public interface IFigure
 {

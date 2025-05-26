@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Spawner : MonoBehaviour
 {
-    public static Spawner Instance;
-
     public GameObject objectToSpawn;
     public Transform container;
 
@@ -15,11 +13,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        Instance = this;
-
         boxCollider = GetComponent<BoxCollider2D>();
-
-        Spawn();
     }
 
     public void Spawn()
@@ -61,7 +55,7 @@ public class Spawner : MonoBehaviour
 
             Figure figure = Figure.Create(list[_counter].FigureColor, list[_counter].FigureType, list[_counter].AnimalType, randomPosition, container);
 
-            TryFrozen(figure);
+            TryFrozenFigure(figure);
 
             _counter++;
             
@@ -69,7 +63,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void TryFrozen(Figure figure)
+    public void TryFrozenFigure(Figure figure)
     {
         if (Random.Range(0, 10) <= 2)
         {

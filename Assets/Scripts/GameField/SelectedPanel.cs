@@ -10,11 +10,14 @@ public class SelectedPanel : MonoBehaviour
     public RectTransform rect;
     public List<RectTransform> UiCells = new List<RectTransform>();
     public List<Figure> Figures = new List<Figure>();
-    public Action FigureAdded;
+    public static Action FigureAdded, OnFigureFull;
 
     public void Awake()
     {
         Instance = this;
+
+        FigureAdded += GameLogic.ChangeCurMoves;
+        GameLogic.OnRestart += ClearLists;
     }
 
     public void AddFigure(Figure figure)
@@ -69,7 +72,7 @@ public class SelectedPanel : MonoBehaviour
 
         if (Figures.Count >= UiCells.Count)
         {
-            EndGameWindow.Instance.End(false);
+            OnFigureFull?.Invoke();
         }
     }
 

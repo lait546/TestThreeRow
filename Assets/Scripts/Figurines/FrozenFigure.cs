@@ -6,7 +6,7 @@ public class FrozenFigure : FigureDecorator
 {
     public FrozenFigure(IFigure figure) : base(figure) {
         this.CanPress = false;
-        GameLogic.CurMovesChanged += DeFrozen;
+        GameLogic.OnCurMovesChanged += DeFrozen;
 
         Frozen(figure);
     }
@@ -26,6 +26,7 @@ public class FrozenFigure : FigureDecorator
     {
         if (GameLogic.CurrentCountMoves >= 15)
         {
+            GameLogic.OnCurMovesChanged -= DeFrozen;
             CanPress = true;
             UpdateFigure(true);
         }
@@ -39,5 +40,10 @@ public class FrozenFigure : FigureDecorator
     public override void Destroy()
     {
         base.Destroy();
+    }
+
+    public void OnDestroy()
+    {
+        GameLogic.OnCurMovesChanged -= DeFrozen;
     }
 }
